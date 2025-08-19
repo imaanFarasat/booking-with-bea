@@ -1,0 +1,584 @@
+{
+  "salon_name": "Book with Bea",
+  "currency": "CAD",
+  "services": {
+    "happy_hour_specials": {
+      "category_name": "Happy Hour Specials",
+      "description": "Special discounted services available Monday to Wednesday 12:00pm - 3:00pm only",
+      "services": [
+        {
+          "name": "Happy Hour Regular Mani & Pedi Special",
+          "description": "Happy hour Mani & Pedi Special is available Mon - Wed 12:00pm to 3:00pm only. Treat yourself from hands to toes with our Classic Mani & Pedi Combo. This service includes nail trimming, shaping, cuticle care, exfoliation, warm towels, a relaxing hand and foot massage, and your choice of regular polish from our wide color selection. Perfect for a refreshing self-care session or a quick polish upgrade before any occasion.",
+          "price": 70.00,
+          "duration": "1 hr 5 min",
+          "availability": "Mon - Wed 12:00pm - 3:00pm only"
+        },
+        {
+          "name": "Happy Hour Shellac Mani & Pedi Special",
+          "description": "Happy hour Mani & Pedi Special is available Mon - Wed 12:00pm to 3:00pm only. Treat yourself from hands to toes with our Classic Mani & Pedi Combo. This service includes nail trimming, shaping, cuticle care, exfoliation, warm towels, a relaxing hand and foot massage, and your choice of shellac polish from our wide color selection.",
+          "price": 90.00,
+          "duration": "1 hr 15 min",
+          "availability": "Mon - Wed 12:00pm - 3:00pm only"
+        }
+      ]
+    },
+    "feet_treatments": {
+      "category_name": "Feet Treatments",
+      "description": "Specialized foot care and toe extension services",
+      "services": [
+        {
+          "name": "Toe Extension 2 Big Toes",
+          "description": "Enhance the appearance of your feet with custom extensions on both big toes. Perfect for clients with broken, short, or uneven toenails, this service uses sculpted gel or acrylic to create a natural-looking extension that blends seamlessly with your existing nails. Finished with your choice of polish for a clean, flawless look.",
+          "price": 20.00,
+          "duration": "15 min"
+        },
+        {
+          "name": "1 Big Toe Extension",
+          "description": "Single big toe extension service",
+          "price": 10.00,
+          "duration": "10 min"
+        }
+      ]
+    },
+    "pedicures": {
+      "category_name": "Pedicures",
+      "description": "Complete foot care and nail services",
+      "services": [
+        {
+          "name": "Pedicure Kid's",
+          "description": "A perfect treat for little feet! Our Kid's Pedicure includes a warm foot soak, gentle nail trimming and shaping, light exfoliation, and a relaxing lotion massage. Finished with your child's choice of regular polish. Fun, safe, and designed to make your little one feel pampered just like the grown-ups!",
+          "price": 40.00,
+          "duration": "35 min",
+          "target_audience": "Children"
+        },
+        {
+          "name": "Pedicure Kids - Shellac Polish",
+          "description": "A sweet and simple pedicure made just for kids! This service includes gentle nail trimming, shaping, a soothing lotion massage, and your child's choice of shellac polish. Safe, fun, and perfect for little feet that love to feel fancy!",
+          "price": 50.00,
+          "duration": "35 min",
+          "target_audience": "Children"
+        },
+        {
+          "name": "Deluxe Pedicure Shellac (WOMEN'S)",
+          "description": "Includes 1 Shellac colour. A comprehensive experience that encompasses a rejuvenating jelly solution (citrus,tropical,rose petals, hot stones and warm towels )and a soothing paraffin treatment and foot mask .These services have been thoughtfully designed to provide a superior level of pampering, ensuring you leave with exceptionally soft and revitalized feet.",
+          "price": 120.00,
+          "duration": "1 hr 15 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Deluxe Pedicure Shellac (Men's)",
+          "description": "Includes 1 Shellac colour. A comprehensive experience that encompasses a rejuvenating jelly solution (citrus,tropical,rose petals, hot stones and warm towels )and a soothing paraffin treatment and foot mask .These services have been thoughtfully designed to provide a superior level of pampering, ensuring you leave with exceptionally soft and revitalized feet.",
+          "price": 120.00,
+          "duration": "1 hr 15 min",
+          "target_audience": "Men"
+        },
+        {
+          "name": "Pedicure - Full Set BioGel Toes",
+          "description": "Opting for a Full Set of BioGel for your toes along with a pedicure, not only enhances the overall look and health of your toes, but also presents an excellent opportunity to save on your services. This combination package offers exceptional value for your investment. Experience the dual benefits of impeccable toe aesthetics and savings by choosing this service.",
+          "price": 150.00,
+          "duration": "1 hr 50 min"
+        },
+        {
+          "name": "Pedicure: Shellac Polish (WOMEN'S)",
+          "description": "Give your feet the care they deserve with our long-lasting Shellac Pedicure. This luxurious service includes nail trimming, shaping, cuticle care, exfoliating scrub to smooth and refresh the skin, and a relaxing foot massage. Warm towels provide added comfort, followed by the application of Shellac gel polish, cured under LED light for instant drying and chip-free wear.",
+          "price": 60.00,
+          "duration": "45 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Pedicure: Regular Polish (WOMEN'S)",
+          "description": "Treat your feet to our Classic Pedicure featuring regular polish. This service includes a warm foot soak, nail trimming and shaping, detailed cuticle care, exfoliating scrub to smooth the skin, a relaxing foot massage, and warm towels for added comfort. Finished with your choice of regular polish from our beautiful color selection.",
+          "price": 50.00,
+          "duration": "35 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Pedicure Overlay Toes",
+          "description": "Strengthen and beautify your toenails with our durable overlay service combined with a full pedicure. This treatment includes nail trimming, shaping, cuticle care, exfoliation, and a relaxing foot massage, followed by the application of a lightweight, long-lasting dip powder, gel, or acrylic overlay on your natural toenails. Finished with your choice of polish or left natural for a sleek, healthy look.",
+          "price": 140.00,
+          "duration": "1 hr"
+        },
+        {
+          "name": "Pedicure Refill Toes",
+          "description": "Maintain the strength and beauty of your toenail enhancements with our Toe Refill service combined with a full pedicure. This treatment includes nail shaping, cuticle care, exfoliation, and a relaxing foot massage, along with expertly filling in the growth area of your dip powder, gel, or acrylic overlays on your toes. Finished with your choice of polish for a fresh, flawless look.",
+          "price": 135.00,
+          "duration": "1 hr 45 min"
+        },
+        {
+          "name": "Pedicure Regular (Men's)",
+          "description": "Tailored for men's needs, this pedicure focuses on grooming and comfort. It includes a warm foot soak, nail trimming and shaping, cuticle care, callus smoothing, and a relaxing foot massage. Finished with buffing for a natural, polished look—no polish applied.",
+          "price": 55.00,
+          "duration": "40 min",
+          "target_audience": "Men"
+        },
+        {
+          "name": "Pedicure Citrus",
+          "description": "This is a revitalizing treatment that uses citrus fruits to pamper, energize, brighten and exfoliate tired feet. Your feet are soaked in warm water with fruits and essential oils. This helps to soften the skin, reduce swelling and also provide other aromatherapy benefits.",
+          "price": 80.00,
+          "duration": "45 min"
+        },
+        {
+          "name": "Pedicure - Russian Dry",
+          "description": "Russian dry pedicure service",
+          "price": 120.00,
+          "duration": "45 min"
+        },
+        {
+          "name": "Regular Pedicure Dry (WOMEN'S)",
+          "description": "A dry pedicure is a waterless foot treatment that focusses on precision, hygiene and long lasting results. Best for someone who is looking for beautiful results in less time.",
+          "price": 45.00,
+          "duration": "30 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Shellac Pedicure Dry (Women's)",
+          "description": "A dry pedicure is a waterless foot treatment that focusses on precision, hygiene and long lasting results. Best for someone who is looking for beautiful results in less time.",
+          "price": 50.00,
+          "duration": "30 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Pedicure Jelly",
+          "description": "A luxurious treatment that involves soaking your feet in warm water and a gelatinous mix that turns into a thick jelly like consistency infused with essences oils. A few benefits includes exfoliation, improved circulation, a great pedicure that feels indulgent and special.",
+          "price": 65.00,
+          "duration": "45 min"
+        },
+        {
+          "name": "Pedicure- Stress Relief",
+          "description": "Melt away tension with this service - a deeply soothing experience designed to relax the body and calm the mind. This treatment features an epsom salt soak to ease muscle aches, eucalyptus oil towels for calming aromatherapy and a warm steam vaporizer to open pores and enhance relaxation. Enjoy a therapeutic paraffin wax treatment for pain relief followed by a hot stone massage to melt away stress. Includes one color of gel polish.",
+          "price": 90.00,
+          "duration": "45 min"
+        }
+      ]
+    },
+    "polish_services": {
+      "category_name": "Polish Services",
+      "description": "Quick polish applications without full manicure/pedicure",
+      "services": [
+        {
+          "name": "Regular Polish (Feet)",
+          "description": "Get a quick refresh with regular polish on your toes, no pedicure required. This express service includes gentle nail cleansing and your choice of polish from our wide color selection. Perfect for in-between pedicures or when you just need a color change. Does not include soaking, cuticle care, or massage.",
+          "price": 35.00,
+          "duration": "30 min",
+          "type": "Express service"
+        },
+        {
+          "name": "Shellac Polish Feet",
+          "description": "Enjoy long-lasting, chip-free color on your toes with our Shellac Polish Application, no pedicure needed. This express service includes light nail prep and cleansing, followed by your choice of Shellac gel polish, cured under LED light for a high-gloss finish. Does not include soaking, cuticle care, exfoliation, or massage. Ideal for quick touch-ups or in-between full pedicure appointments.",
+          "price": 45.00,
+          "duration": "30 min",
+          "type": "Express service"
+        },
+        {
+          "name": "Regular Polish (Hands)",
+          "description": "Need a quick color refresh? This express service includes gentle nail cleansing (removal of old polish is additional charge) and your choice of regular polish, no manicure or cuticle work included. Perfect for touch-ups or a fast splash of color when you're on the go.",
+          "price": 30.00,
+          "duration": "30 min",
+          "type": "Express service"
+        },
+        {
+          "name": "Shellac Polish (Hands)",
+          "description": "Get a long-lasting, high-gloss finish with our Shellac Polish Application, perfect for clients who don't need a full manicure. This express service includes nail cleansing (removal of old polish is additional charge) and Shellac gel polish applied and cured under LED light for chip-free wear. No cuticle work or massage included.",
+          "price": 40.00,
+          "duration": "30 min",
+          "type": "Express service"
+        }
+      ]
+    },
+    "add_ons": {
+      "category_name": "Add Ons",
+      "description": "Additional services that can be added to existing treatments",
+      "services": [
+        {
+          "name": "Hand Renewal Treatment Regular",
+          "description": "Treat your hands with our luxurious process designed for ultimate softness and rejuvenation. We start with cuticle cleaning, nail cutting, and shaping. The journey continues with exfoliation to remove rough patches, followed by a salicylic acid treatment to refine the fingers. Your hands are then gently steamed to open pores, preparing them for a nourishing serum application. Then, a 10-minute collagen glove treatment adds firmness and a silky texture to your hands. To complete the experience, enjoy a relaxing hand massage, followed by a warm towel wrap, ensuring your hands are perfectly pampered and renewed. *This service includes a choice of 1 regular polish colour.",
+          "price": 120.00,
+          "duration": "1 hr 40 min"
+        },
+        {
+          "name": "Hand Renewal Treatment Shellac",
+          "description": "Treat your hands with our luxurious process designed for ultimate softness and rejuvenation. We start with cuticle cleaning, nail cutting, and shaping. The journey continues with exfoliation to remove rough patches, followed by a salicylic acid treatment to refine the fingers. Your hands are then gently steamed to open pores, preparing them for a nourishing serum application. Then, a 10-minute collagen glove treatment adds firmness and a silky texture to your hands. To complete the experience, enjoy a relaxing hand massage, followed by a warm towel wrap, ensuring your hands are perfectly pampered and renewed. *This service includes a long-lasting Shellac gel polish cured under LED light.",
+          "price": 130.00,
+          "duration": "1 hr 45 min"
+        },
+        {
+          "name": "Hands Renewal Treatment (No Polish)",
+          "description": "Treat your hands with our luxurious process designed for ultimate softness and rejuvenation. We start with cuticle cleaning, nail cutting, and shaping. The journey continues with exfoliation to remove rough patches, followed by a salicylic acid treatment to refine the fingers. Your hands are then gently steamed to open pores, preparing them for a nourishing serum application. Then, a 10-minute collagen glove treatment adds firmness and a silky texture to your hands. To complete the experience, enjoy a relaxing hand massage, followed by a warm towel wrap, ensuring your hands are perfectly pampered and renewed.",
+          "price": 105.00,
+          "duration": "1 hr 30 min"
+        },
+        {
+          "name": "Collagen Gloves/socks",
+          "description": "Enriched with collagen and organ oil, ultra nutritious moisturizer penetrates quickly to provide intense nourishing care. The gloves/socks are made with dual layer biodegradable material which provides 99% LED/UV ray protection.",
+          "price": 20.00,
+          "duration": "15 min"
+        },
+        {
+          "name": "Dramatic Design",
+          "description": "Please be aware that pricing for each design may vary based on factors such as the complexity of the design, the labor involved, and the specific products utilized to create it.",
+          "price": 50.00,
+          "duration": "30 min"
+        },
+        {
+          "name": "Extra 10 Mins Massage Hands/Feet",
+          "description": "Revitalize and Relax: Indulge in a blissful 10-minute hand and foot massage experience. Expertly delivered by skilled hands and soothing massage guns!",
+          "price": 20.00,
+          "duration": "10 min"
+        },
+        {
+          "name": "Extra Design",
+          "description": "Please be aware that pricing for each design may vary based on factors such as the complexity of the design, the labor involved, and the specific products utilized to create it.",
+          "price": 30.00,
+          "duration": "30 min"
+        },
+        {
+          "name": "Simple Design",
+          "description": "Add a touch of personality to your manicure or pedicure with simple, elegant nail art. Choose from minimal designs like dots, stripes, accent nails, or subtle seasonal art. Examples include French design, Cat-eye polish, Chrome, etc. Perfect for enhancing your look without going over the top. Available as an add-on to any manicure or pedicure. For more detailed or custom designs, please ask about our advanced nail art options.",
+          "price": 20.00,
+          "duration": "10 min"
+        },
+        {
+          "name": "Paraffin Wax Treatment",
+          "description": "Indulge your hands or feet with our luxurious Paraffin Wax Treatment. Warm, soothing paraffin wax is applied to deeply moisturize and soften the skin, improve circulation, and relieve stiffness or soreness. Perfect for dry, cracked skin or as a relaxing add-on to any manicure or pedicure service.",
+          "price": 20.00,
+          "duration": "30 min"
+        },
+        {
+          "name": "Regular/Shellac Removal Only",
+          "description": "For Regular Polish: Quick and gentle removal of regular nail polish using non-drying polish remover. Ideal as a standalone service or added before a fresh polish application. For Shellac Polish: Safe and professional removal of Shellac gel polish using acetone wraps or soak-off method. Includes light buffing and a nourishing cuticle oil application to maintain natural nail health.",
+          "price": 10.00,
+          "duration": "10 min"
+        },
+        {
+          "name": "Regular/Shellac Removal With New Set",
+          "description": "For Regular Polish: Quick and gentle removal of regular nail polish using non-drying polish remover. Ideal as a standalone service or added before a fresh polish application. For Shellac Polish: Safe and professional removal of Shellac gel polish using acetone wraps or soak-off method. Includes light buffing and a nourishing cuticle oil application to maintain natural nail health.",
+          "price": 5.00,
+          "duration": "10 min"
+        },
+        {
+          "name": "French Nails",
+          "description": "Classic, clean, and effortlessly elegant. This add on features a clean white tip over your chosen base color - perfect for a polished, classic finish.",
+          "price": 30.00,
+          "duration": "30 min"
+        },
+        {
+          "name": "French Toes",
+          "description": "Elevate your pedicure with the timeless elegance of french tips. This add-on features a clean white tip over your chosen base color - perfect for a polished, classic finish.",
+          "price": 30.00,
+          "duration": "30 min"
+        },
+        {
+          "name": "Reshape",
+          "description": "Nail reshaping service",
+          "price": 10.00,
+          "duration": "30 min"
+        }
+      ]
+    },
+    "nail_treatments": {
+      "category_name": "Nail Treatments",
+      "description": "Comprehensive nail care and enhancement services",
+      "services": [
+        {
+          "name": "Combo Mani+Pedi Regular Polish",
+          "description": "Treat yourself from hands to toes with our Classic Mani & Pedi Combo. This service includes nail trimming, shaping, cuticle care, exfoliation, warm towels, a relaxing hand and foot massage, and your choice of regular polish from our wide color selection. Perfect for a refreshing self-care session or a quick polish upgrade before any occasion.",
+          "price": 85.00,
+          "duration": "1 hr 5 min"
+        },
+        {
+          "name": "Combo Mani+Pedi Shellac Polish",
+          "description": "Pamper yourself with our luxurious Shellac Mani & Pedi Combo, designed for lasting beauty and total relaxation. This service includes nail trimming, shaping, detailed cuticle care, gentle exfoliation to smooth the skin, and a soothing massage for both hands and feet. Enjoy the added comfort of warm towels, followed by a flawless application of Shellac gel polish, cured under LED light for instant drying.",
+          "price": 105.00,
+          "duration": "1 hr 15 min"
+        },
+        {
+          "name": "Combo Shellac Mani + Regular Pedi",
+          "description": "Enjoy the best of both worlds with our Shellac Manicure and Regular Polish Pedicure Combo. This service includes detailed nail trimming, shaping, cuticle care, gentle exfoliation, and a relaxing massage for both hands and feet. Warm towels provide added comfort, while Shellac gel polish on the hands ensures a high-gloss, chip-free finish. Your pedicure is completed with a vibrant regular polish color of your choice for a fresh, polished look.",
+          "price": 95.00,
+          "duration": "1 hr 10 min"
+        },
+        {
+          "name": "Combo Regular Mani + Shellac Pedi",
+          "description": "Refresh your look with our Regular Manicure and Shellac Pedicure Combo. This pampering service includes nail trimming, shaping, detailed cuticle care, gentle exfoliation, and a relaxing massage for both hands and feet. Enjoy warm towels for added comfort. Your manicure is finished with your choice of classic polish, while your pedicure features a long-lasting Shellac gel polish cured under LED light.",
+          "price": 95.00,
+          "duration": "1 hr 20 min"
+        },
+        {
+          "name": "Combo Dry Mani + Dry Pedi",
+          "description": "This nail care treatment skips water soak, instead lotions, heated towels or sprays are used to soften skin and cuticles on hands and feet. Hands are shaped, buffed and polish is applied to finish. For the pedicure, its the same process as the manicure. This is a faster process and is also longer lasting.",
+          "price": 80.00,
+          "duration": "1 hr"
+        }
+      ]
+    },
+    "acrylic_services": {
+      "category_name": "Acrylic Services",
+      "description": "Acrylic nail extensions and overlays",
+      "services": [
+        {
+          "name": "Acrylic Full Set Extra Long",
+          "description": "Acrylics provide exceptional strength and durability, making it ideal for those who desire longer nail sets. Acrylic is a robust choice but may not possess the same odorless and nail-enhancing qualities as BioGel. Acrylic is recommended for when you have specific preferences for extended or particularly resilient nail designs, as it excels in longevity and structural integrity.",
+          "price": 115.00,
+          "duration": "1 hr 40 min"
+        },
+        {
+          "name": "Acrylic Full Set Short-Medium",
+          "description": "Acrylics provide exceptional strength and durability, making it ideal for those who desire longer nail sets. Acrylic is a robust choice but may not possess the same odorless and nail-enhancing qualities as BioGel. Acrylic is recommended for when you have specific preferences for extended or particularly resilient nail designs, as it excels in longevity and structural integrity.",
+          "price": 90.00,
+          "duration": "1 hr 20 min"
+        },
+        {
+          "name": "Acrylic Full Set Long",
+          "description": "Acrylics provide exceptional strength and durability, making it ideal for those who desire longer nail sets. Acrylic is a robust choice but may not possess the same odorless and nail-enhancing qualities as BioGel. Acrylic is recommended for when you have specific preferences for extended or particularly resilient nail designs, as it excels in longevity and structural integrity.",
+          "price": 100.00,
+          "duration": "1 hr 30 min"
+        },
+        {
+          "name": "Acrylic Overlay Medium-Long",
+          "description": "Acrylics provide exceptional strength and durability, making it ideal for those who desire longer nail sets. Acrylic is a robust choice but may not possess the same odorless and nail-enhancing qualities as BioGel. Acrylic is recommended for when you have specific preferences for extended or particularly resilient nail designs, as it excels in longevity and structural integrity. Overlays enhance the natural nail by creating a smooth, protective layer. *Medium to Long",
+          "price": 90.00,
+          "duration": "1 hr 10 min"
+        },
+        {
+          "name": "Acrylic Overlay Short",
+          "description": "Acrylics provide exceptional strength and durability, making it ideal for those who desire longer nail sets. Acrylic is a robust choice but may not possess the same odorless and nail-enhancing qualities as BioGel. Acrylic is recommended for when you have specific preferences for extended or particularly resilient nail designs, as it excels in longevity and structural integrity. Overlays enhance the natural nail by creating a smooth, protective layer. *Short length",
+          "price": 80.00,
+          "duration": "1 hr 10 min"
+        },
+        {
+          "name": "Acrylic Refill (Inclu. 1 Colour)",
+          "description": "The optimal timeframe for an Acrylic refill is typically around 3-4 weeks after the initial Acrylic Full Set. This schedule ensures that your Acrylic nails are refreshed and maintained at their best, preserving their appearance and structural integrity.",
+          "price": 80.00,
+          "duration": "1 hr"
+        }
+      ]
+    },
+    "gel_services": {
+      "category_name": "Gel Services",
+      "description": "Gel-X and BioGel nail enhancement services",
+      "services": [
+        {
+          "name": "Gel-X Long",
+          "description": "Say good-bye to the traditional, time-consuming methods of nail extensions and embrace the revolutionary Gel-X system. Known for it's lightweight feel and natural look, Gel-X is the world's first and only full-cover soft gel extension system. Unlike acrylic or hard gel, Gel-X offers flexibility and durability while being gentle on your natural nails. Gel-X extensions are ideal for clients who want long-lasting, salon-quality nails without compromising nail health. Gel-X can last up to 3-4 weeks. It is easy to apply and and easier to remove.",
+          "price": 130.00,
+          "duration": "1 hr 15 min"
+        },
+        {
+          "name": "Gel-X Short-Medium",
+          "description": "Say good-bye to the traditional, time-consuming methods of nail extensions and embrace the revolutionary Gel-X system. Known for it's lightweight feel and natural look, Gel-X is the world's first and only full-cover soft gel extension system. Unlike acrylic or hard gel, Gel-X offers flexibility and durability while being gentle on your natural nails. Gel-X extensions are ideal for clients who want long-lasting, salon-quality nails without compromising nail health. Gel-X can last up to 3-4 weeks. It is easy to apply and and easier to remove.",
+          "price": 120.00,
+          "duration": "1 hr"
+        },
+        {
+          "name": "Gel-X Refill",
+          "description": "The optimal timeframe for a gel - x refill is typically around 3-4 weeks after the initial Full Set. This schedule ensures that your nails are refreshed and maintained at their best, preserving their appearance and structural integrity.",
+          "price": 80.00,
+          "duration": "1 hr"
+        },
+        {
+          "name": "BioGel Full Set Extra Long",
+          "description": "BioGel is designed to enhance nail strength and health, providing lasting results for approximately 3-4 weeks. Full removal may not be necessary until the BioGel application shows signs of aging or deterioration. Regular refills are recommended to maintain nail health and the integrity of the BioGel. Your nail care specialist can guide you on when to refill or remove the BioGel based on its condition.",
+          "price": 125.00,
+          "duration": "1 hr 30 min"
+        },
+        {
+          "name": "BioGel Full Set Long",
+          "description": "BioGel is designed to enhance nail strength and health, providing lasting results for approximately 3-4 weeks. Full removal may not be necessary until the BioGel application shows signs of aging or deterioration. Regular refills are recommended to maintain nail health and the integrity of the BioGel. Your nail care specialist can guide you on when to refill or remove the BioGel based on its condition.",
+          "price": 105.00,
+          "duration": "1 hr 10 min"
+        },
+        {
+          "name": "BioGel Full Set Short-Medium",
+          "description": "BioGel is designed to enhance nail strength and health, providing lasting results for approximately 3-4 weeks. Full removal may not be necessary until the BioGel application shows signs of aging or deterioration. Regular refills are recommended to maintain nail health and the integrity of the BioGel. Your nail care specialist can guide you on when to refill or remove the BioGel based on its condition.",
+          "price": 95.00,
+          "duration": "1 hr 20 min"
+        },
+        {
+          "name": "BioGel Overlay Medium-Long",
+          "description": "BioGel is designed to enhance nail strength and health, providing lasting results for approximately 3-4 weeks. Full removal may not be necessary until the BioGel application shows signs of aging or deterioration. Regular refills are recommended to maintain nail health and the integrity of the BioGel. Your nail care specialist can guide you on when to refill or remove the BioGel based on its condition. Overlays enhance the natural nail by creating a smooth, protective layer.",
+          "price": 95.00,
+          "duration": "1 hr"
+        },
+        {
+          "name": "BioGel Overlay Short",
+          "description": "BioGel is designed to enhance nail strength and health, providing lasting results for approximately 3-4 weeks. Full removal may not be necessary until the BioGel application shows signs of aging or deterioration. Regular refills are recommended to maintain nail health and the integrity of the BioGel. Your nail care specialist can guide you on when to refill or remove the BioGel based on its condition. Overlays enhance the natural nail by creating a smooth, protective layer.",
+          "price": 85.00,
+          "duration": "1 hr"
+        },
+        {
+          "name": "BioGel Refill (Inclu. 1 colour)",
+          "description": "The optimal timeframe for a BioGel refill is typically around 3-4 weeks after the initial BioGel Full Set. This schedule ensures that your BioGel nails are refreshed and maintained at their best, preserving their appearance and structural integrity.",
+          "price": 80.00,
+          "duration": "1 hr"
+        }
+      ]
+    },
+    "dip_services": {
+      "category_name": "Dip Services",
+      "description": "Dip powder nail enhancement services",
+      "services": [
+        {
+          "name": "Full Set Dip Nails",
+          "description": "This innovative technique combines long-lasting durability with stunning beauty, giving you flawless nails for up to 4 weeks without the need for UV lights! The process is simple yet powerful: after applying a base coat, your nails are dipped into a fine powder, forming a protective layer that hardens into the perfect manicure. Unlike acrylic or gel, dipping powder is lightweight, odor-free, and gentle on your natural nails. No more heavy layers or damaging removals. You'll get salon-quality nails with a smooth, glossy finish that won't chip or crack. Plus, the quick application means you can enjoy more time showing off your gorgeous nails and less time in the salon.",
+          "price": 85.00,
+          "duration": "1 hr 15 min"
+        },
+        {
+          "name": "Dip Overlay",
+          "description": "Strengthen and beautify your natural nails with our Dip Powder Overlay. This service applies lightweight, durable dip powder directly over your natural nails (without extensions) for added strength and long-lasting color. Includes nail shaping, cuticle care, and your choice of dip powder shade for a flawless, chip-resistant finish.",
+          "price": 75.00,
+          "duration": "50 min"
+        }
+      ]
+    },
+    "removal_services": {
+      "category_name": "Removal Services",
+      "description": "Professional removal of nail enhancements",
+      "services": [
+        {
+          "name": "BioGel/Acrylic/Dip Removal Or Soak Off",
+          "description": "Gently remove old gel polish, BioGel, Dip or Acrylics with our professional soak-off service. We safely break down the product using high-quality acetone and careful techniques that protect the natural nail. Ideal for clients transitioning to a new set or taking a break from enhancements. Includes light buffing and nourishing cuticle oil application to leave your nails clean, smooth, and healthy.",
+          "price": 20.00,
+          "duration": "15 min"
+        }
+      ]
+    },
+    "manicures": {
+      "category_name": "Manicures",
+      "description": "Complete hand and nail care services",
+      "services": [
+        {
+          "name": "Cut & Shape",
+          "description": "Our cut and shape service focuses exclusively on nail care. This service entails the precise cutting of nails and a comprehensive cleaning of your nails overall, ensuring a neat and tidy appearance. Cuticle cutting is not included.",
+          "price": 20.00,
+          "duration": "20 min"
+        },
+        {
+          "name": "Manicure- Deluxe Regular (WOMEN'S)",
+          "description": "A comprehensive experience that encompasses a rejuvenating hand mask and a soothing paraffin treatment. These services have been thoughtfully designed to provide a superior level of pampering, ensuring you leave with exceptionally soft and revitalized hands.",
+          "price": 80.00,
+          "duration": "1 hr 15 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Manicure - Deluxe Shellac (WOMEN'S)",
+          "description": "A comprehensive experience that encompasses a rejuvenating hand mask and a soothing paraffin treatment. These services have been thoughtfully designed to provide a superior level of pampering, ensuring you leave with exceptionally soft and revitalized hands.",
+          "price": 90.00,
+          "duration": "1 hr 15 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Manicure - Regular (WOMEN'S)",
+          "description": "Keep it timeless with our Classic Manicure featuring regular polish. This service includes nail trimming, shaping, cuticle care, an exfoliating scrub treatment, a warm towel, a relaxing lotion hand massage, and your choice of polish from our wide selection of traditional lacquer shades. Perfect for those who love a polished look with easy at-home removal.",
+          "price": 40.00,
+          "duration": "30 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Manicure - Shellac (WOMEN'S)",
+          "description": "Enjoy long-lasting shine and chip-free color with our Shellac Manicure. This service includes nail trimming, shaping, cuticle care, and a flawless application of Shellac gel polish, cured under LED light for instant drying and extended wear. Finish with an exfoliating scrub treatment, a warm towel, a relaxing lotion hand massage and a nourishing cuticle oil treatment for healthy, beautiful nails.",
+          "price": 50.00,
+          "duration": "30 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Manicure Kid's",
+          "description": "A sweet and simple manicure made just for kids! This service includes gentle nail trimming, shaping, a soothing lotion massage, and your child's choice of regular polish. Safe, fun, and perfect for little hands that love to feel fancy!",
+          "price": 30.00,
+          "duration": "30 min",
+          "target_audience": "Children"
+        },
+        {
+          "name": "Manicure Kid's- Shellac Polish",
+          "description": "Kids manicure with shellac polish",
+          "price": 45.00,
+          "duration": "30 min",
+          "target_audience": "Children"
+        },
+        {
+          "name": "Manicure -Russian Dry (WOMEN'S)",
+          "description": "Experience the ultimate in precision nail care with our Russian Dry Manicure. This advanced, e-file technique focuses on detailed cuticle work for an ultra-clean, refined look. No water is used, allowing for longer-lasting results and a perfectly polished nail plate. Includes meticulous cuticle cleaning and nail shaping. Polish will be additional charge (depending on regular or shellac polish).",
+          "price": 75.00,
+          "duration": "30 min",
+          "target_audience": "Women"
+        },
+        {
+          "name": "Manicure Structured",
+          "description": "Our Structured Manicure offers enhanced nail care designed to strengthen and protect your natural nails. This service includes precise nail shaping, meticulous cuticle grooming, buffing for a smooth nail surface, and the application of a strengthening base treatment. Finished with your choice of polish or left natural for a clean, healthy look.",
+          "price": 70.00,
+          "duration": "1 hr 5 min"
+        },
+        {
+          "name": "Manicure (Men's)",
+          "description": "Designed specifically for men, this manicure focuses on nail grooming and hand care without polish. Includes nail trimming, shaping, cuticle maintenance, and a soothing hand massage to keep your hands healthy and looking their best. Perfect for a clean, polished appearance suitable for any occasion.",
+          "price": 40.00,
+          "duration": "30 min",
+          "target_audience": "Men"
+        }
+      ]
+    },
+    "special_services": {
+      "category_name": "Special Services",
+      "description": "Unique and specialized nail care services",
+      "services": [
+        {
+          "name": "Nail Repair",
+          "description": "Broken, chipped, or lifted nail? We've got you covered. Our Nail Repair service restores the appearance and strength of a damaged nail using gel, acrylic, dip, or builder gel, matched to your existing set. Ideal for fixing single nails between full services or touch-ups after accidental breaks. Available as an add-on or standalone service. Multiple repairs may require extended time. (Severity of damage may also charge differently)",
+          "price": 10.00,
+          "duration": "15 min"
+        }
+      ]
+    },
+    "other_services": {
+      "category_name": "Other Services",
+      "description": "Additional services and special offerings",
+      "services": [
+        {
+          "name": "Gift Card",
+          "description": "Gift card service",
+          "price": 100.00,
+          "duration": "2 hr"
+        },
+        {
+          "name": "Gift Card",
+          "description": "Gift card service",
+          "price": 200.00,
+          "duration": "2 hr 30 min"
+        },
+        {
+          "name": "Night Cap",
+          "description": "Cannot make it during the day? Our Night Cap service is designed for you! Enjoy a relaxing salon experience after regular hours - exclusively for our booking customers. Call us to book the Night Cap services. Night Cap hours : 9 PM to 12 AM",
+          "price": "varies",
+          "duration": "30 min",
+          "availability": "9 PM to 12 AM"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "total_services": 67,
+    "price_range": {
+      "min": 5.00,
+      "max": 200.00
+    },
+    "duration_range": {
+      "min": "10 min",
+      "max": "2 hr 30 min"
+    },
+    "categories": [
+      "Happy Hour Specials",
+      "Feet Treatments", 
+      "Pedicures",
+      "Polish Services",
+      "Add Ons",
+      "Nail Treatments",
+      "Acrylic Services",
+      "Gel Services",
+      "Dip Services",
+      "Removal Services",
+      "Manicures",
+      "Special Services",
+      "Other Services"
+    ]
+  }
+}

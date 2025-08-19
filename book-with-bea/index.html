@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book with Bea - Professional Nail Technician Toronto | Martina's Nail Place</title>
+    <meta name="description" content="Book your nail services with Bea at Martina's Nail Place in Downtown Toronto. Professional manicures, pedicures, acrylics, gels, and more. Available for women, men, and kids. Book from 9 AM to 9 PM daily.">
+    <meta name="keywords" content="nail salon, manicure, pedicure, acrylic nails, gel nails, nail services, beauty salon, online booking, Bea nail salon">
+    <meta name="author" content="Book with Bea">
+    <meta property="og:title" content="Book with Bea - Professional Nail Technician Toronto">
+    <meta property="og:description" content="Book your nail services with Bea at Martina's Nail Place in Downtown Toronto. Professional nail care for women, men, and kids.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bookwithbea.com">
+    <link rel="canonical" href="https://bookwithbea.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-first">B</span>EA
+            </div>
+            <nav class="nav">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="contact-info">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <span class="phone">+1 (437) 869-0604</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="https://res.cloudinary.com/dvpoab5n3/image/upload/v1755166888/bea-professional-nail-technician-toronto.png" alt="Bea - Professional Nail Technician Toronto" class="bea-photo">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Book with Bea</h1>
+                    <h2 class="hero-location-title">Toronto Downtown</h2>
+                    <p class="hero-subtitle">Professional nail care for women, men, and kids. Available daily from 9 AM to 9 PM.</p>
+                    <div class="hero-location">
+                        <i class="fas fa-map-marker-alt location-icon"></i>
+                        <span>Martina's Nail Place • 44 Gerard Street, Downtown Toronto</span>
+                    </div>
+                    <a href="#services" class="cta-button">
+                        <i class="fas fa-paint-brush nail-icon"></i>
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="audience-tabs">
+                <button class="audience-tab active" data-audience="all">All Services</button>
+                <button class="audience-tab" data-audience="Women">Women</button>
+                <button class="audience-tab" data-audience="Men">Men</button>
+                <button class="audience-tab" data-audience="Children">Kids</button>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" name="customerName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customerEmail">Email *</label>
+                            <input type="email" id="customerEmail" name="customerEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customerPhone">Phone *</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serviceSelect">Select Service *</label>
+                            <select id="serviceSelect" name="serviceSelect" required>
+                                <option value="">Choose a service...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="appointmentDate">Select Date *</label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="appointmentTime">Select Time *</label>
+                            <select id="appointmentTime" name="appointmentTime" required>
+                                <option value="">Choose a time...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="service-details" id="serviceDetails" style="display: none;">
+                            <div class="detail-item">
+                                <span class="detail-label">Price:</span>
+                                <span class="detail-value" id="servicePrice">$0</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value" id="serviceDuration">0 min</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">Confirm Booking</span>
+                            <span class="button-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Processing...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="booking-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Business Hours</h3>
+                        <p>Monday - Sunday<br>9:00 AM - 9:00 PM</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Easy Booking</h3>
+                        <p>Book online 24/7<br>Instant confirmation</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>All Ages Welcome</h3>
+                        <p>Women, Men & Kids<br>Specialized services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Flow (Page-like) -->
+    <section id="bookingFlow" class="booking" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Finalize Your Booking</h2>
+            <div id="bookingFlowContent"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info-card">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+1 (437) 869-0604</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@bookwithbea.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p><strong>Martina's Nail Place</strong><br>44 Gerard Street<br>Downtown Toronto, ON</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Book with Bea. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content success-modal">
+            <div class="modal-header success-header">
+                <div class="success-title">
+                    <div class="success-icon-large">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Booking Confirmed! 🎉</h3>
+                </div>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body success-body">
+                <div class="confirmation-message">
+                    <p class="success-text">Your appointment has been successfully booked!</p>
+                    <p class="reminder-text">You will receive a confirmation email shortly. Please arrive at the salon 5 minutes before your scheduled time.</p>
+                </div>
+                <div class="booking-summary" id="bookingSummary">
+                    <!-- Booking details will be inserted here -->
+                </div>
+                <div class="confirmation-actions">
+                    <button class="confirmation-button primary" onclick="closeModal()">
+                        <i class="fas fa-check"></i>
+                        Got it!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Booking Error</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <p id="errorMessage">An error occurred while processing your booking. Please try again.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
