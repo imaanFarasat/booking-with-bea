@@ -19,10 +19,7 @@ const pool = mysql.createPool({
   ...dbConfig,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0,
-  reconnect: true,
-  idleTimeout: 300000,
-  maxIdle: 10
+  queueLimit: 0
 });
 
 // Test database connection
