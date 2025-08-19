@@ -11,9 +11,7 @@ const dbConfig = {
   charset: 'utf8mb4',
   timezone: '+00:00',
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-  connectTimeout: 60000,
-  acquireTimeout: 60000,
-  timeout: 60000
+  connectTimeout: 60000
 };
 
 // Create connection pool
@@ -21,7 +19,10 @@ const pool = mysql.createPool({
   ...dbConfig,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
+  reconnect: true,
+  idleTimeout: 300000,
+  maxIdle: 10
 });
 
 // Test database connection
