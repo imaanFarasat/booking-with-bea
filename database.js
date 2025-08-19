@@ -170,11 +170,20 @@ async function createTablesIfNeeded() {
 // Generate time slots without stored procedure
 async function generateInitialTimeSlots() {
   try {
-    // Check if time slots already exist
+    // Check if time slots already exist for today and future
     const [existing] = await pool.execute('SELECT COUNT(*) as count FROM time_slots WHERE slot_date >= CURDATE()');
     if (existing[0].count > 0) {
-      console.log('ℹ️ Time slots already exist');
-      return;
+      console.log('ℹ️ Time slots already exist, checking if update needed...');
+      
+      // Check if we have evening slots (after 6 PM) - if not, regenerate
+      const [eveningSlots] = await pool.execute('SELECT COUNT(*) as count FROM time_slots WHERE slot_time >= "18:00:00" AND slot_date >= CURDATE()');
+      if (eveningSlots[0].count === 0) {
+        console.log('🔄 Updating time slots to include evening hours...');
+        await pool.execute('DELETE FROM time_slots WHERE slot_date >= CURDATE()');
+      } else {
+        console.log('ℹ️ Evening slots exist, no update needed');
+        return;
+      }
     }
 
     console.log('🕐 Generating time slots for next 30 days...');
