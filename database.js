@@ -159,8 +159,57 @@ async function createTablesIfNeeded() {
     `);
 
     console.log('✅ Database tables created successfully');
+    
+    // Generate initial time slots for next 30 days
+    await generateInitialTimeSlots();
   } catch (error) {
     console.error('❌ Error creating tables:', error.message);
+  }
+}
+
+// Generate time slots without stored procedure
+async function generateInitialTimeSlots() {
+  try {
+    // Check if time slots already exist
+    const [existing] = await pool.execute('SELECT COUNT(*) as count FROM time_slots WHERE slot_date >= CURDATE()');
+    if (existing[0].count > 0) {
+      console.log('ℹ️ Time slots already exist');
+      return;
+    }
+
+    console.log('🕐 Generating time slots for next 30 days...');
+    
+    // Generate slots for next 30 days
+    const today = new Date();
+    for (let dayOffset = 0; dayOffset < 30; dayOffset++) {
+      const date = new Date(today);
+      date.setDate(today.getDate() + dayOffset);
+      
+      // Skip Sundays (day 0)
+      if (date.getDay() === 0) continue;
+      
+      const dateStr = date.toISOString().split('T')[0];
+      
+      // Generate slots from 9:00 AM to 6:00 PM (30-minute intervals)
+      for (let hour = 9; hour < 18; hour++) {
+        for (let minute = 0; minute < 60; minute += 30) {
+          const timeStr = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:00`;
+          
+          try {
+            await pool.execute(
+              'INSERT IGNORE INTO time_slots (slot_date, slot_time, is_available) VALUES (?, ?, TRUE)',
+              [dateStr, timeStr]
+            );
+          } catch (err) {
+            // Ignore duplicate entries
+          }
+        }
+      }
+    }
+    
+    console.log('✅ Time slots generated successfully');
+  } catch (error) {
+    console.error('❌ Error generating time slots:', error.message);
   }
 }
 
