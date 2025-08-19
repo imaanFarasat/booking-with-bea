@@ -39,8 +39,9 @@ async function testConnection() {
 // Initialize database (create tables if they don't exist)
 async function initializeDatabase() {
   try {
-    // In Railway, the database already exists, so we just need to create tables
+    // In Railway, create tables if they don't exist
     if (process.env.NODE_ENV === 'production') {
+      await createTablesIfNeeded();
       console.log('✅ Database initialization completed (Railway environment)');
       return true;
     }
@@ -63,6 +64,103 @@ async function initializeDatabase() {
     console.error('❌ Database initialization failed:', error.message);
     console.log('ℹ️  If using Railway, make sure the MySQL service is connected');
     return false;
+  }
+}
+
+// Create tables if they don't exist
+async function createTablesIfNeeded() {
+  try {
+    // Create customers table
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS customers (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) UNIQUE NOT NULL,
+        phone VARCHAR(20),
+        favorite_services JSON DEFAULT (JSON_ARRAY()),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        INDEX idx_email (email)
+      ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    `);
+
+    // Create bookings table
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS bookings (
+        id VARCHAR(50) PRIMARY KEY,
+        customer_id INT NOT NULL,
+        customer_email VARCHAR(255) NOT NULL,
+        customer_name VARCHAR(255) NOT NULL,
+        customer_phone VARCHAR(20),
+        booking_date DATE NOT NULL,
+        booking_time TIME NOT NULL,
+        service_name VARCHAR(255) NOT NULL,
+        services_data JSON DEFAULT (JSON_ARRAY()),
+        total_price DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+        total_duration INT NOT NULL DEFAULT 30,
+        is_multiple_services BOOLEAN DEFAULT FALSE,
+        target_audience VARCHAR(100) DEFAULT 'General',
+        booking_type VARCHAR(50) DEFAULT 'single',
+        status ENUM('confirmed', 'cancelled', 'completed') DEFAULT 'confirmed',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE,
+        INDEX idx_booking_date (booking_date),
+        INDEX idx_booking_time (booking_time),
+        INDEX idx_customer_email (customer_email),
+        INDEX idx_status (status),
+        UNIQUE KEY unique_booking_slot (booking_date, booking_time)
+      ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    `);
+
+    // Create time_slots table
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS time_slots (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        slot_date DATE NOT NULL,
+        slot_time TIME NOT NULL,
+        is_available BOOLEAN DEFAULT TRUE,
+        booking_id VARCHAR(50) DEFAULT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (booking_id) REFERENCES bookings(id) ON DELETE SET NULL,
+        UNIQUE KEY unique_slot (slot_date, slot_time),
+        INDEX idx_slot_date (slot_date),
+        INDEX idx_available (is_available)
+      ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    `);
+
+    // Create other tables
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS individual_service_bookings (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        main_booking_id VARCHAR(50) NOT NULL,
+        service_name VARCHAR(255) NOT NULL,
+        service_price DECIMAL(10,2) NOT NULL,
+        service_duration INT NOT NULL DEFAULT 30,
+        booking_date DATE NOT NULL,
+        booking_time TIME NOT NULL,
+        service_order INT DEFAULT 1,
+        status ENUM('confirmed', 'cancelled', 'completed') DEFAULT 'confirmed',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (main_booking_id) REFERENCES bookings(id) ON DELETE CASCADE,
+        INDEX idx_main_booking (main_booking_id),
+        INDEX idx_service_date_time (booking_date, booking_time)
+      ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    `);
+
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS blocked_dates (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        blocked_date DATE NOT NULL UNIQUE,
+        reason VARCHAR(255) DEFAULT 'Holiday/Closed',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_blocked_date (blocked_date)
+      ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    `);
+
+    console.log('✅ Database tables created successfully');
+  } catch (error) {
+    console.error('❌ Error creating tables:', error.message);
   }
 }
 
