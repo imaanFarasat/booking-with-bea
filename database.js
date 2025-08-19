@@ -190,8 +190,8 @@ async function generateInitialTimeSlots() {
       
       const dateStr = date.toISOString().split('T')[0];
       
-      // Generate slots from 9:00 AM to 6:00 PM (30-minute intervals)
-      for (let hour = 9; hour < 18; hour++) {
+      // Generate slots from 9:00 AM to 9:00 PM (30-minute intervals)
+      for (let hour = 9; hour < 21; hour++) {
         for (let minute = 0; minute < 60; minute += 30) {
           const timeStr = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:00`;
           
