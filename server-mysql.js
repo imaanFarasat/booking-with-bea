@@ -167,6 +167,7 @@ async function saveBookingToSheets(booking) {
 console.log('🔧 Environment check:');
 console.log('PORT:', process.env.PORT || 3000);
 console.log('DB_HOST:', process.env.DB_HOST || 'localhost');
+console.log('DB_PORT:', process.env.DB_PORT || 3306);
 console.log('DB_NAME:', process.env.DB_NAME || 'booking_with_bea_time');
 console.log('EMAIL_USER:', process.env.EMAIL_USER ? '✅ Set' : '❌ Not set');
 
